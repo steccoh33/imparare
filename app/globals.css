@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fdfaf7;
+  --foreground: #2a221c;
+  --surface: #ffffff;
+  --border: #e8ddd0;
+  --muted: #8a7a68;
+
+  --primary: #1f7a3d;
+  --primary-foreground: #f5fff8;
+  --secondary: #2f6f8f;
+  --secondary-foreground: #f5fbff;
+  --accent: #e0a80f;
+  --accent-foreground: #2a221c;
+
+  --success: #2f9c5a;
+  --warning: #d98c1f;
+  --danger: #d3453b;
+  --info: #3b82c4;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root:not([data-theme="light"]) {
+  @media (prefers-color-scheme: dark) {
+    --background: #14110d;
+    --foreground: #f4ece3;
+    --surface: #201b15;
+    --border: #34291f;
+    --muted: #a99a87;
+
+    --primary: #4dbb7b;
+    --primary-foreground: #06210f;
+    --secondary: #6bb2d0;
+    --secondary-foreground: #04202b;
+    --accent: #f2c94c;
+    --accent-foreground: #221204;
+
+    --success: #4dbb7b;
+    --warning: #e6a53a;
+    --danger: #e6685e;
+    --info: #62a6db;
+  }
+}
+
+:root[data-theme="dark"] {
+  --background: #14110d;
+  --foreground: #f4ece3;
+  --surface: #201b15;
+  --border: #34291f;
+  --muted: #a99a87;
+
+  --primary: #4dbb7b;
+  --primary-foreground: #06210f;
+  --secondary: #6bb2d0;
+  --secondary-foreground: #04202b;
+  --accent: #f2c94c;
+  --accent-foreground: #221204;
+
+  --success: #4dbb7b;
+  --warning: #e6a53a;
+  --danger: #e6685e;
+  --info: #62a6db;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-info: var(--info);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
